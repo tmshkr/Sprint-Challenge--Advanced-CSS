@@ -1,0 +1,48 @@
+#modal {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: @waterloo;
+
+  p {
+    display: none;
+    color: @sea-shell;
+    font-size: 2rem;
+    text-align: center;
+    max-width: 300px;
+    margin: 25vh auto 0;
+  }
+
+  form {
+    cursor: initial;
+    max-width: 300px;
+    margin: 25vh auto 0;
+    h3 {
+      color: @sea-shell;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    label {
+      display: block;
+      color: @sea-shell;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    input {
+      display: block;
+      font-size: 2rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      width: 100%;
+    }
+    button {
+      display: block;
+      margin: 2rem auto 0;
+      .button(@shuttle-gray, @wild-sand, 2rem, @border-radius: 8px);
+    }
+  }
+}

@@ -1,1 +1,29 @@
 // Mixins Here
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.transition (@transition) {
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -ms-transition: @transition;
+  -o-transition: @transition;
+}
+
+.button(@bg-color: grey, @font-color: white, @font-size: 1rem, @padding: 1rem, @border-radius: 5px) {
+  background-color: @bg-color;
+  font-size: @font-size;
+  color: @font-color;
+  padding: @padding;
+  .border-radius(@border-radius);
+  border: 1px solid @font-color;
+  .transition(~"background-color 0.15s, color 0.15s");
+
+  &:hover {
+    background-color: @font-color;
+    border: 1px solid @bg-color;
+    color: @bg-color;
+  }
+}
