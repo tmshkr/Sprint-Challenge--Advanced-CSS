@@ -89,7 +89,7 @@
             the planet Earth.
           </p>
 
-          <button>
+          <button id="sign-up">
             Sign Up
           </button>
         </div>
@@ -103,5 +103,42 @@
         <p>Copyright SpaceWalkers 2020</p>
       </footer>
     </div>
+
+    <div id="modal">
+      <p>Thanks for signing up!</p>
+      <form>
+        <h3>Sign Up for SpaceWalkers Magazine!</h3>
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" />
+        </label>
+        <button>Submit</button>
+      </form>
+    </div>
+    <script>
+      var modal = document.getElementById("modal");
+      document.getElementById("sign-up").onclick = () => {
+        modal.style.display = "block";
+      };
+      modal.onclick = e => {
+        if (e.target.id === "modal") {
+          modal.style.display = null;
+        }
+      };
+      modal.querySelector("button").onclick = e => {
+        e.preventDefault();
+        modal.querySelector("form").style.display = "none";
+        modal.querySelector("p").style.display = "block";
+        setTimeout(() => {
+          modal.style.display = null;
+          modal.querySelector("form").style.display = null;
+          modal.querySelector("p").style.display = null;
+        }, 1000);
+      };
+    </script>
   </body>
 </html>
