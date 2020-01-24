@@ -34,13 +34,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+An adaptive website will select an appropriate HTML template based on the screen size of the device being used to access the website in order to send that HTML to the client, so that the website will be displayed correctly for a specific screen size. A fully responsive website, on the other hand, will use the same HTML template for all screen sizes, dynamically adjusting the layout of the website according to the screen size of the device using `@media` queries and responsive units.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+A mobile-first design will target mobile devices first, and then expand the layout to fill larger screen sizes. This is compared to a desktop-first approach, which targets desktop browsers first and then adjusts the layout to accommodate smaller screen sizes.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+`font-size: 62.5%` will set the base font size of the root `html` element to 62.5% of its normal size, so that `1rem` will then be equal to 62.5% of the browser's base font size. For example, if the browser's base font size is `16px`, then `font-size: 62.5%` will make `1rem` equal to `10px`.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessors like LESS and SASS offer useful features and a more robust syntax than CSS, so that stylesheets written with these tools are more powerful, specific, and organized than regular CSS. Although their syntax is similar to regular CSS, browsers can't natively use stylesheets written in LESS or SASS, so they must be compiled to regular CSS, usually using a command-line based tool.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+Nesting is the most useful feature that CSS preprocessors offer, so that stylesheets can be more organized and use less classes, increasing code clarity. Nesting allows parts of a webpage to be easily styled as a cohesive unit, targeting elements based on their relationship to their parent elements, instead of having to target elements with lots of classes or IDs.
+
+Getting used to a CSS preprocessor's syntax is the biggest hurdle to getting the most out of the features it offers. Using mixins in LESS can be confusing because it uses a similar syntax to CSS `.class` selectors. Similarly, variables in LESS use the same syntax as `@media` rules, which can also be confusing.
+
+---
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
